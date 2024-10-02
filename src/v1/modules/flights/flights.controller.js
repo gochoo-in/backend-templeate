@@ -79,6 +79,10 @@ async function fetchFlightDetails(fromCityId, toCityId, departureDate, adults, c
 export const getFlights = async (req, res) => {
     try {
         const { departureCityId, arrivalCityId } = req.params;
+
+        
+
+        
         const { departureDate, adults = 1, children = 0 } = req.query;
 
         const flightDetails = await fetchFlightDetails(departureCityId, arrivalCityId, departureDate, adults, children);
